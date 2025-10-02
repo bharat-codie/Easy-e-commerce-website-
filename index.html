@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple E‑commerce (Frontend)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">MyShop</h1>
+      <div class="search-cart">
+        <input id="search" type="search" placeholder="Search products...">
+        <button id="cart-btn" class="cart-btn">Cart (<span id="cart-count">0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters">
+      <h2>Filters</h2>
+      <select id="sort">
+        <option value="default">Sort: Default</option>
+        <option value="price-asc">Price: Low → High</option>
+        <option value="price-desc">Price: High → Low</option>
+      </select>
+    </section>
+
+    <section id="products" class="products-grid" aria-live="polite">
+      <!-- Products will be rendered here by JavaScript -->
+    </section>
+  </main>
+
+  <!-- Cart drawer -->
+  <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="close-cart">Close</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total">Total: ₹<span id="cart-total">0.00</span></div>
+      <button id="checkout" class="btn primary">Checkout</button>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay hidden"></div>
+
+  <footer class="site-footer">
+    <div class="container">Made with ❤️ — Simple frontend only</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
